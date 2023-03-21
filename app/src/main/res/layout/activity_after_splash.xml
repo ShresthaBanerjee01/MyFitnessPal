@@ -11,5 +11,19 @@
     android:background="@drawable/bg1"
     >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:fontFamily="@font/sarala"
+        android:text="Hello!"
+        android:textSize="50dp"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:fontFamily="@font/sarala"
+        android:text="Choose your activity"
+        android:textSize="20dp"></TextView>
 </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
