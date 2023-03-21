@@ -18,14 +18,18 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="252dp">
+            android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textview1"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="241dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/sarala"
                 android:text="Hello!"
@@ -34,10 +38,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
+                android:layout_alignBottom="@+id/textview1"
+                android:layout_alignParentEnd="true"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="110dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="140dp"
+                android:layout_marginBottom="-70dp"
                 android:fontFamily="@font/sarala"
                 android:text="Choose your activity"
                 android:textSize="25dp"></TextView>
