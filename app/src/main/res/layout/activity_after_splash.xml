@@ -10,20 +10,40 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:fontFamily="@font/sarala"
-        android:text="Hello!"
-        android:textSize="50dp"></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:fontFamily="@font/sarala"
-        android:text="Choose your activity"
-        android:textSize="20dp"></TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="252dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/sarala"
+                android:text="Hello!"
+                android:textSize="50dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/sarala"
+                android:text="Choose your activity"
+                android:textSize="25dp"></TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
