@@ -8,17 +8,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class aftersplash extends AppCompatActivity {
-    private Button bmi;
+    private Button bmical;
     private Button yoga;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_splash);
-        bmi=findViewById(R.id.button1);
-        bmi.setOnClickListener(new View.OnClickListener() {
+        bmical=findViewById(R.id.button1);
+        bmical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(aftersplash.this,bmi.class);
+                startActivity(intent);
             }
         });
         yoga=findViewById(R.id.button2);

@@ -51,7 +51,7 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="572dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center">
 
@@ -116,7 +116,6 @@
                     android:id="@+id/button3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:layout_above="@+id/button2"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="60dp"
@@ -150,7 +149,33 @@
                     android:text="Wellness"
                     android:textAllCaps="false"
                     android:textColor="#b1ccbd"
-                    android:textSize="30dp">
+                    android:textSize="30dp"
+                    android:layout_marginLeft="100dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"
+                android:outlineProvider="none">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button5"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_above="@+id/button2"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/custom_button"
+                    android:text="hi"
+                    android:textAllCaps="false"
+                    android:textColor="#b1ccbd"
+                    android:textSize="30dp"
+                    android:layout_marginLeft="100dp">
 
                 </androidx.appcompat.widget.AppCompatButton>
             </androidx.cardview.widget.CardView>
