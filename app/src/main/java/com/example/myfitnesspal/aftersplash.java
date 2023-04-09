@@ -18,8 +18,7 @@ public class aftersplash extends AppCompatActivity {
         bmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(aftersplash.this,bmi.class);
-                startActivity(intent);
+                Intent intent = new Intent(aftersplash.this,bmi.class);
             }
         });
         yoga=findViewById(R.id.button2);
