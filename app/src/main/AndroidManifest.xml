@@ -12,6 +12,12 @@
         android:theme="@style/Theme.MyFitnessPal"
         tools:targetApi="31">
         <activity
+            android:name=".bmi"
+            android:exported="false" />
+        <activity
+            android:name=".bmiactivity"
+            android:exported="false" />
+        <activity
             android:name=".yoga_select_pose"
             android:exported="false" />
         <activity

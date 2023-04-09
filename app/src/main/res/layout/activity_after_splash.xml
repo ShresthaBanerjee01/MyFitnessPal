@@ -71,7 +71,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="60dp"
                     android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
+                    android:background="@drawable/ic_launcher_background"
                     android:text="B.M.I"
                     android:textColor="#b1ccbd"
                     android:textSize="30dp"
