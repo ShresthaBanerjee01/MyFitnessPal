@@ -23,8 +23,7 @@ public class yoga_select_pose extends AppCompatActivity
 
     public void ImageButtonClicked(View view)
     {
-        int i=0;
-        for(i=0;i<newArray.length;i++)
+        for(int i=0;i<newArray.length;i++)
         {
             int value=i+1;
             Intent intent =new Intent(yoga_select_pose.this,ThirdActivity.class);

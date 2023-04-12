@@ -29,7 +29,8 @@
                 android:drawableRight="@drawable/boatposesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -46,7 +47,8 @@
                 android:drawableRight="@drawable/bowposesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -63,7 +65,8 @@
                 android:drawableRight="@drawable/cobraposesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -80,7 +83,8 @@
                 android:drawableRight="@drawable/crescentlungesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -97,7 +101,8 @@
                 android:drawableRight="@drawable/downwardfacingdogsize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -114,7 +119,8 @@
                 android:drawableRight="@drawable/easyposesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -131,7 +137,8 @@
                 android:drawableRight="@drawable/halfpegionsize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -148,7 +155,8 @@
                 android:drawableRight="@drawable/lowlungesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -165,7 +173,8 @@
                 android:drawableRight="@drawable/upwardbowsize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -182,7 +191,8 @@
                 android:drawableRight="@drawable/warriorposesize"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
@@ -199,7 +209,8 @@
                 android:drawableRight="@drawable/warriorpose2size"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:onClick="ImageButtonClicked">
 
             </androidx.appcompat.widget.AppCompatButton>
         </LinearLayout>
