@@ -16,6 +16,7 @@
             android:orientation="vertical"
             android:layout_marginBottom="20dp">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/boat_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -32,6 +33,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bow_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -48,6 +50,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cobra_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -64,6 +67,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/crescent_lunge"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -80,6 +84,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/downward_facing_dog"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -96,6 +101,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/easy_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -112,6 +118,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/half_pegion_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -128,6 +135,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/low_lunge"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -144,6 +152,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upward_bow"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -160,6 +169,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/warrior_pose"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
@@ -176,6 +186,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/warrior_pose2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/custom_button2"
