@@ -13,7 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -121,6 +122,70 @@
                 android:textStyle="bold"
                 android:paddingLeft="10dp"
                 android:drawableRight="@drawable/halfpegionsize"
+                android:drawablePadding="40dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button2"
+                android:text="Low Lunge"
+                android:textAllCaps="false"
+                android:textSize="22.2sp"
+                android:fontFamily="@font/sarala"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/lowlungesize"
+                android:drawablePadding="40dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button2"
+                android:text="Upward Bow"
+                android:textAllCaps="false"
+                android:textSize="22.2sp"
+                android:fontFamily="@font/sarala"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/upwardbowsize"
+                android:drawablePadding="40dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button2"
+                android:text="Warrior Pose"
+                android:textAllCaps="false"
+                android:textSize="22.2sp"
+                android:fontFamily="@font/sarala"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/warriorposesize"
+                android:drawablePadding="40dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/custom_button2"
+                android:text="Warrior Pose 2"
+                android:textAllCaps="false"
+                android:textSize="22.2sp"
+                android:fontFamily="@font/sarala"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/warriorpose2size"
                 android:drawablePadding="40dp"
                 android:paddingRight="20dp"
                 android:layout_marginBottom="20dp">
