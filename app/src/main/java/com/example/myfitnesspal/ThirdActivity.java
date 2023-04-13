@@ -4,9 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
-
+    Button startBtn;
+    TextView mTextView;
+    private CountDownTimer countDownTimer;
+    private boolean mTimerRunning;
+    private long mTimeLeftInMillIS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +24,7 @@ public class ThirdActivity extends AppCompatActivity {
         String number=intent.getStringExtra("Value");
 
         int intNumber=Integer.parseInt(number);
+        Log.i("message",number);
         switch (intNumber)
         {
             case 1:
@@ -32,9 +42,33 @@ public class ThirdActivity extends AppCompatActivity {
             case 5:
                 setContentView(R.layout.activity_downwardfacingdog);
                 break;
+            case 6:
+                setContentView(R.layout.activity_easypose);
+                break;
+            case 7:
+                setContentView(R.layout.activity_halfpegionpose);
+                break;
+            case 8:
+                setContentView(R.layout.activity_lowlunge);
+                break;
+            case 9:
+                setContentView(R.layout.activity_upwardbow);
+                break;
+            case 10:
+                setContentView(R.layout.activity_warrior);
+                break;
+            case 11:
+                setContentView(R.layout.activity_warrior2);
+                break;
         }
+        startBtn=findViewById(R.id.startButton);
+        mTextView=findViewById(R.id.time);
 
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        setContentView(R.layout.activity_boat);
+            }
+        });
     }
 }
