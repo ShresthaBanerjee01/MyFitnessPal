@@ -121,7 +121,7 @@
                     android:layout_marginTop="60dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/custom_button"
-                    android:text="Nutrition"
+                    android:text="Out and Up"
                     android:textAllCaps="false"
                     android:textColor="#b1ccbd"
                     android:textSize="30dp"

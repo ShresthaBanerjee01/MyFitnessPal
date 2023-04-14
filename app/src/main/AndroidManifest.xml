@@ -15,6 +15,9 @@
             android:name=".ThirdActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".travel"
             android:exported="false" />
         <activity
