@@ -171,7 +171,7 @@
                     android:layout_marginTop="60dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/custom_button"
-                    android:text="hi"
+                    android:text="Doctors"
                     android:textAllCaps="false"
                     android:textColor="#b1ccbd"
                     android:textSize="30dp"

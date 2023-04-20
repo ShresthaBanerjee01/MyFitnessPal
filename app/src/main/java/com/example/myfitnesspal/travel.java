@@ -40,8 +40,14 @@ public class travel extends AppCompatActivity {
         topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.topplaces));
         topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.topplaces));
         topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-
-
+        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Hill Stations", "India", "20K-50K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
         setTopPlacesRecycler(topPlacesDataList);
     }
 
