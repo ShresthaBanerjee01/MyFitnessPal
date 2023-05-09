@@ -52,13 +52,13 @@
         app:layout_constraintStart_toStartOf="@+id/country_name"
         app:layout_constraintTop_toBottomOf="@+id/country_name" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <ImageButton
+        android:id="@+id/nextloc"
         android:layout_width="37dp"
         android:layout_height="99dp"
         android:background="@drawable/cardbackgroung"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_icon" />
+        app:srcCompat="@drawable/arrow_2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

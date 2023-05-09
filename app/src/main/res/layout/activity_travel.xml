@@ -68,7 +68,7 @@
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:text="Search Destinations"
-            android:textColor="@color/black"
+            android:textColor="#05386B"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -91,7 +91,8 @@
         android:id="@+id/top_places_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:paddingBottom="270dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

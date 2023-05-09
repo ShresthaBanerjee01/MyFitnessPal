@@ -24,12 +24,12 @@ public class bmi extends AppCompatActivity {
     RelativeLayout mmale,mfemale;
 
     int intweight=55;
-    int intage=22;
+    int intage=17;
     int currentprogress;
     String mintprogress="170";
     String typerofuser="0";
     String weight2="55";
-    String age2="22";
+    String age2="17";
 
     @SuppressLint({"ResourceAsColor", "MissingInflatedId"})
     @Override

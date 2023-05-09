@@ -15,7 +15,7 @@ import java.util.List;
 public class travel extends AppCompatActivity {
 
     RecyclerView recentRecycler, topPlacesRecycler;
-   // RecentsAdapter recentsAdapter;
+    // RecentsAdapter recentsAdapter;
     TopPlacesAdapter topPlacesAdapter;
 
     @Override
@@ -33,21 +33,16 @@ public class travel extends AppCompatActivity {
         recentsDataList.add(new RecentsData("AM Lake", "India", "From $200", R.drawable.recentimage1));
         recentsDataList.add(new RecentsData("Nilgiri Hills", "India", "From $300", R.drawable.recentimage2));*/
 
-       // setRecentRecycler(recentsDataList);
+        // setRecentRecycler(recentsDataList);
 
         List<TopPlacesData> topPlacesDataList = new ArrayList<>();
-        topPlacesDataList.add(new TopPlacesData("Hill Stations", "India", "20K-50K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Hill Stations", "India", "20K-50K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Landscapes", "India", "30K-40K", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("Hill Stations", "India", "20K-50K", R.drawable.hillstation_tp));
+        topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.beaches_tp));
+        topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.safaris_tp));
+        topPlacesDataList.add(new TopPlacesData("Magnificent Cities", "India", "30K-40K", R.drawable.cities_tp));
+        topPlacesDataList.add(new TopPlacesData("Palaces & Forts", "India", "30K-40K", R.drawable.forts_tp));
+        topPlacesDataList.add(new TopPlacesData("Temples", "India", "30K-40K", R.drawable.temples_tp));
+
         setTopPlacesRecycler(topPlacesDataList);
     }
 
