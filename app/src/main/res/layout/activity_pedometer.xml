@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3F8E1"
+    tools:context=".pedometer">
+
+    <RelativeLayout
+        android:id="@+id/stepbox"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+
+        android:layout_below="@id/targetid"
+        android:layout_marginStart="120dp"
+       android:layout_centerHorizontal="true"
+        android:layout_marginEnd="141dp"
+
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/cardbackgroung">
+
+        <ImageView
+            android:layout_width="170px"
+            android:layout_height="170px"
+            android:layout_above="@id/stepsTaken"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/footsteps">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/stepsTaken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@id/stepbox"
+        android:layout_marginBottom="-105dp"
+        android:layout_marginLeft="20dp" android:background="@drawable/cardbackgroung">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Today's Count"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/stepsdaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/raleway"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"></TextView></RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@id/stepbox"
+        android:layout_alignRight="@id/stepbox"
+        android:layout_marginBottom="-105dp"
+        android:layout_marginRight="-120dp"
+        android:background="@drawable/cardbackgroung">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Steps to go"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/stepstogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/raleway"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"></TextView></RelativeLayout>
+    <ImageButton
+        android:id="@+id/targetid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="#D3F8E1"
+        android:src="@drawable/target">
+    </ImageButton>
+    <EditText
+        android:id="@+id/targetset"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+       android:layout_toEndOf="@id/targetid"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="1000"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+     ></EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/targetset"
+        android:layout_marginStart="15dp"
+       android:layout_marginTop="45dp"
+        android:fontFamily="@font/raleway"
+        android:text="steps"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <android.widget.Button
+        android:id="@+id/calBurnt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="Check your Calorie burnt"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold">
+
+    </android.widget.Button>
+</RelativeLayout>
