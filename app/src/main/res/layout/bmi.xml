@@ -37,8 +37,8 @@
             android:layout_above="@id/textmale"
             android:layout_centerInParent="true"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/male"
-            android:contentDescription="@string/todo">
+            android:contentDescription="@string/todo"
+            android:src="@drawable/male">
 
         </ImageView>
 
@@ -128,7 +128,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
             android:layout_marginBottom="50dp"
             android:fontFamily="@font/raleway"
             android:text="170"
@@ -218,8 +217,8 @@
             android:id="@+id/currentweight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/raleway"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/raleway"
             android:text="55"
             android:textAlignment="center"
             android:textColor="@color/black"

@@ -1,16 +1,17 @@
 package com.example.myfitnesspal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class aftersplash extends AppCompatActivity {
      Button bmi;
      Button yoga;
      Button travel;
+    Button wellness;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,14 @@ public class aftersplash extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent2 = new Intent(aftersplash.this,travel.class);
                 startActivity(intent2);
+            }
+        });
+        wellness=findViewById(R.id.button4);
+        wellness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(aftersplash.this,wellness.class);
+                startActivity(intent4);
             }
         });
     }
