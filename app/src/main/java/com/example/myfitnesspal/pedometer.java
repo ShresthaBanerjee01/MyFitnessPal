@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -22,6 +23,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -39,8 +47,11 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
     private String target;int inttarget;
     private TextView stepdailyTextView , textViewStepDetector , textviewstepstogo;
    EditText targetset; ImageButton save;
-    private int  stepDetect = 0 ,stepsdaily=0 , stepstogo =0;private Calendar lastTimestamp;
-    Button calorieburnt;
+    private int  stepDetect = 0 ,stepsdaily=0 , stepstogo =0,i=1;private Calendar lastTimestamp;
+    Button calorieburnt; BarChart barChart;
+    BarData barData;
+    BarDataSet barDataSet;
+    ArrayList barEntriesArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +59,15 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
 
         calorieburnt=findViewById(R.id.calBurnt);
         save=findViewById(R.id.targetid);
-
-
+        barChart = findViewById(R.id.idBarChart);
+        barEntriesArrayList = new ArrayList<>();
+        barDataSet = new BarDataSet(barEntriesArrayList, "Pedometer");
+        barData = new BarData(barDataSet);
+        barChart.setData(barData);
+        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        barDataSet.setValueTextColor(Color.BLACK);
+        barDataSet.setValueTextSize(16f);
+        barChart.getDescription().setEnabled(false);barChart.invalidate();
         // Check if the permission has been granted
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
@@ -146,8 +164,10 @@ stepstogo=inttarget-stepsdaily ;
             sensorDetect.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_NORMAL);
         }
         if (lastTimestamp != null && hasNewDayStarted(lastTimestamp)) {
+
+            barEntriesArrayList.add(new BarEntry(i,stepsdaily));
             stepsdaily = 0;
-            stepstogo = inttarget;
+            stepstogo = inttarget;i++;
             updateStepCountText();
             updateStepstogoText();
         }
@@ -204,4 +224,5 @@ stepstogo=inttarget-stepsdaily ;
         editor.putString(STEP_TARGET_KEY, text);
         editor.apply();
     }
+
 }

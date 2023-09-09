@@ -3,8 +3,8 @@ package com.example.myfitnesspal.model;
 public class TopPlacesData {
 
     String placeName;
-    String countryName;
-    String price;
+  /*  String countryName;
+    String price;*/
     Integer imageUrl;
 
     public Integer getImageUrl() {
@@ -15,10 +15,10 @@ public class TopPlacesData {
         this.imageUrl = imageUrl;
     }
 
-    public TopPlacesData(String placeName, String countryName, String price, Integer imageUrl) {
+    public TopPlacesData(String placeName, Integer imageUrl) {
         this.placeName = placeName;
-        this.countryName = countryName;
-        this.price = price;
+       /* this.countryName = countryName;
+        this.price = price;*/
         this.imageUrl = imageUrl;
     }
 
@@ -30,7 +30,7 @@ public class TopPlacesData {
         this.placeName = placeName;
     }
 
-    public String getCountryName() {
+  /*  public String getCountryName() {
         return countryName;
     }
 
@@ -44,5 +44,5 @@ public class TopPlacesData {
 
     public void setPrice(String price) {
         this.price = price;
-    }
+    }*/
 }

@@ -49,7 +49,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-
+android:id="@+id/stepsTakenbox"
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_alignBottom="@id/stepbox"
@@ -77,7 +77,7 @@
             android:textSize="35sp"
             android:textStyle="bold"></TextView></RelativeLayout>
     <RelativeLayout
-
+android:id="@+id/stepstogobox"
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_alignBottom="@id/stepbox"
@@ -140,6 +140,16 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+android:layout_centerHorizontal="true"
+        android:layout_above="@+id/calBurnt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp" />
 
     <android.widget.Button
         android:id="@+id/calBurnt"

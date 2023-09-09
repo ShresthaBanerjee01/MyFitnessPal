@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#EDF5E1"
     tools:context=".travel">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,45 +93,15 @@
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:paddingBottom="270dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        />
 
 
 
 
-    <LinearLayout
-        android:id="@+id/hide_show"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="#FFFFFF"
-        android:gravity="center"
 
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            android:src="@drawable/home" />
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/flight" />
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/hotel" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
 package com.example.myfitnesspal;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnesspal.adapter.TopPlacesAdapter;
 import com.example.myfitnesspal.model.TopPlacesData;
@@ -36,12 +36,14 @@ public class travel extends AppCompatActivity {
         // setRecentRecycler(recentsDataList);
 
         List<TopPlacesData> topPlacesDataList = new ArrayList<>();
-        topPlacesDataList.add(new TopPlacesData("Hill Stations", "India", "20K-50K", R.drawable.hillstation_tp));
-        topPlacesDataList.add(new TopPlacesData("Beaches", "India", "20K-30K", R.drawable.beaches_tp));
-        topPlacesDataList.add(new TopPlacesData("Safaris", "India", "20K-30K", R.drawable.safaris_tp));
-        topPlacesDataList.add(new TopPlacesData("Magnificent Cities", "India", "30K-40K", R.drawable.cities_tp));
-        topPlacesDataList.add(new TopPlacesData("Palaces & Forts", "India", "30K-40K", R.drawable.forts_tp));
-        topPlacesDataList.add(new TopPlacesData("Temples", "India", "30K-40K", R.drawable.temples_tp));
+        topPlacesDataList.add(new TopPlacesData("Hill Stations", R.drawable.hillstation_tp));
+        topPlacesDataList.add(new TopPlacesData("Beaches", R.drawable.beaches_tp));
+        topPlacesDataList.add(new TopPlacesData("Safaris",  R.drawable.safaris_tp));
+        topPlacesDataList.add(new TopPlacesData("Magnificent Cities", R.drawable.cities_tp));
+        topPlacesDataList.add(new TopPlacesData("Palaces & Forts", R.drawable.forts_tp));
+        topPlacesDataList.add(new TopPlacesData("Temples", R.drawable.temples_tp));
+
+
 
         setTopPlacesRecycler(topPlacesDataList);
     }
@@ -59,7 +61,7 @@ public class travel extends AppCompatActivity {
     private void setTopPlacesRecycler(List<TopPlacesData> topPlacesDataList) {
 
         topPlacesRecycler = findViewById(R.id.top_places_recycler);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
         topPlacesRecycler.setLayoutManager(layoutManager);
         topPlacesAdapter = new TopPlacesAdapter(this, topPlacesDataList);
         topPlacesRecycler.setAdapter(topPlacesAdapter);
