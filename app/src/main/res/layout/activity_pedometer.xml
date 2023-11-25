@@ -106,6 +106,7 @@ android:id="@+id/stepstogobox"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"></TextView></RelativeLayout>
+
     <ImageButton
         android:id="@+id/targetid"
         android:layout_width="wrap_content"
@@ -141,15 +142,6 @@ android:id="@+id/stepstogobox"
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/idBarChart"
-        android:layout_width="wrap_content"
-        android:layout_height="240dp"
-android:layout_centerHorizontal="true"
-        android:layout_above="@+id/calBurnt"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="30dp" />
 
     <android.widget.Button
         android:id="@+id/calBurnt"
@@ -162,9 +154,70 @@ android:layout_centerHorizontal="true"
         android:background="@drawable/buttonbackground"
         android:fontFamily="@font/raleway"
         android:text="Check your Calorie burnt"
+        android:contentDescription="hii"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+    <RelativeLayout
+    android:id="@+id/distancecover"
+    android:layout_width="120dp"
+    android:layout_height="80dp"
+    android:layout_alignBottom="@id/stepbox"
+    android:layout_marginBottom="-210dp"
+    android:layout_marginLeft="20dp" android:background="@drawable/cardbackgroung">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Distance covered (in Km)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"></TextView>
 
-    </android.widget.Button>
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/raleway"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"></TextView></RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/distancetogobox"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@id/stepbox"
+        android:layout_alignRight="@id/stepbox"
+        android:layout_marginBottom="-210dp"
+        android:layout_marginRight="-120dp"
+        android:background="@drawable/cardbackgroung">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Distance to go
+            (in Km)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/distancetogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/raleway"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"></TextView></RelativeLayout>
+
 </RelativeLayout>

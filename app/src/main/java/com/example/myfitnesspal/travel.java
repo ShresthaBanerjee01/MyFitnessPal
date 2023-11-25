@@ -1,6 +1,9 @@
 package com.example.myfitnesspal;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -17,12 +20,19 @@ public class travel extends AppCompatActivity {
     RecyclerView recentRecycler, topPlacesRecycler;
     // RecentsAdapter recentsAdapter;
     TopPlacesAdapter topPlacesAdapter;
-
+ImageView hotels;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
-
+hotels = findViewById(R.id.hotels);
+hotels.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(travel.this, hotels.class);
+        startActivity(intent);
+    }
+});
         // Now here we will add some dummy data in our model class
 
        /* List<RecentsData> recentsDataList = new ArrayList<>();

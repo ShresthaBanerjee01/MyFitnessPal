@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".beaches"
-    android:background="@drawable/backgroudcolour">
+    android:background="@color/white">
+
     <TextView
-        android:id="@+id/textbeaches"
+        android:id="@+id/texthillstations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Beaches"
+        android:text="Top 10 Hill Stations"
         android:textColor="#05386B"
         android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"></TextView>
@@ -23,11 +25,44 @@
         android:id="@+id/top_places_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
         android:clipToPadding="false"
         android:paddingBottom="270dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textbeaches" />
+        app:layout_constraintTop_toBottomOf="@+id/texthillstations" />
+
+    <android.widget.Button
+        android:id="@+id/nextbtn"
+        android:layout_width="73dp"
+        android:layout_height="48dp"
+        android:background="@drawable/buttonbackground"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="TextSizeCheck" />
+
+    <android.widget.Button
+        android:id="@+id/prevbtn"
+        android:layout_width="73dp"
+        android:layout_height="48dp"
+        android:background="@drawable/buttonbackground"
+        android:text="Prev"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="TextSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

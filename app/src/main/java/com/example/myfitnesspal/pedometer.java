@@ -2,11 +2,11 @@
 package com.example.myfitnesspal;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -26,8 +26,6 @@ import androidx.core.app.ActivityCompat;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,17 +39,22 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
     private static final String STEP_COUNT_KEY = "stepCount";
     private static final String STEP_TOGO_KEY = "stepToGo";
     private static final String STEP_TARGET_KEY = "stepTarget";
+    private static final String STEP_DISTANCE_KEY = "stepdistance";
+    private static final String STEP_DISTANCE_TO_GO_KEY = "stepdistancetogo";
     private static final String LAST_TIMESTAMP_KEY = "lastTimestamp";
     private SensorManager sensorDetect;// private SensorManager stepsensor;
     private Sensor stepSensor , StepDetector;
-    private String target;int inttarget;
-    private TextView stepdailyTextView , textViewStepDetector , textviewstepstogo;
+    private String target , distance ,distancetogo ;int inttarget ; double intdistance , intdistancetogo ;
+    private TextView stepdailyTextView , textViewStepDetector , textviewstepstogo , textviewdistance , textviewdistancetogo;
    EditText targetset; ImageButton save;
-    private int  stepDetect = 0 ,stepsdaily=0 , stepstogo =0,i=1;private Calendar lastTimestamp;
+    private int  stepDetect = 0 ,stepsdaily=0 , stepstogo =0;
+    /*i=0*/;
+    private Calendar lastTimestamp;
     Button calorieburnt; BarChart barChart;
     BarData barData;
     BarDataSet barDataSet;
     ArrayList barEntriesArrayList;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,15 +62,15 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
 
         calorieburnt=findViewById(R.id.calBurnt);
         save=findViewById(R.id.targetid);
-        barChart = findViewById(R.id.idBarChart);
+        /*barChart = findViewById(R.id.idBarChart);
         barEntriesArrayList = new ArrayList<>();
         barDataSet = new BarDataSet(barEntriesArrayList, "Pedometer");
         barData = new BarData(barDataSet);
-        barChart.setData(barData);
+
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         barDataSet.setValueTextColor(Color.BLACK);
         barDataSet.setValueTextSize(16f);
-        barChart.getDescription().setEnabled(false);barChart.invalidate();
+        barChart.getDescription().setEnabled(false);barChart.invalidate();*/
         // Check if the permission has been granted
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
@@ -75,7 +78,8 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
         stepsdaily = sharedPreferences.getInt(STEP_COUNT_KEY, 0);
         stepstogo= sharedPreferences.getInt(STEP_TOGO_KEY,0);
         target=sharedPreferences.getString(STEP_TARGET_KEY,"1000");
-
+        distance=sharedPreferences.getString(STEP_DISTANCE_KEY,"0");
+        distancetogo=sharedPreferences.getString(STEP_DISTANCE_TO_GO_KEY,"0");
         long timestampInMillis = sharedPreferences.getLong(LAST_TIMESTAMP_KEY, 0);
         if (timestampInMillis != 0) {
             lastTimestamp = Calendar.getInstance();
@@ -94,10 +98,14 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
         }
         stepdailyTextView = findViewById(R.id.stepsdaily);
         textviewstepstogo=findViewById(R.id.stepstogo);
+        textviewdistance=findViewById(R.id.distance);
+        textviewdistancetogo=findViewById(R.id.distancetogo);
         targetset = findViewById(R.id.targetset);
         targetset.setEnabled(true);
         updateStepCountText();
         updateStepstogoText();
+        updateDistanceText();
+        updateDistancetogoText();
 
         calorieburnt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,14 +150,24 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
             stepDetect = (int) (stepDetect+event.values[0]);
 stepsdaily++;
 stepstogo=inttarget-stepsdaily ;
+intdistance=0.00074*stepsdaily;
+intdistancetogo=stepstogo*0.00074;
+distance=String.format("%.2f", intdistance);
+distancetogo=String.format("%.2f", intdistancetogo);
             updateStepCountText();
             updateStepstogoText();
+            updateDistanceText();
+            updateDistancetogoText();
             updatesteptarget();
 
             textViewStepDetector.setText(String.valueOf(stepDetect));
+            textviewdistance.setText(distance);
+            textviewdistancetogo.setText(distancetogo);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(STEP_COUNT_KEY, stepsdaily);
             editor.putInt(STEP_TOGO_KEY, stepstogo);
+            editor.putString(STEP_DISTANCE_KEY, distance);
+            editor.putString(STEP_DISTANCE_TO_GO_KEY,distancetogo);
             editor.putLong(LAST_TIMESTAMP_KEY, Calendar.getInstance().getTimeInMillis());
             editor.apply();// Update your UI or perform any other step-related logic here
         }
@@ -158,6 +176,8 @@ stepstogo=inttarget-stepsdaily ;
         super.onResume();
         updateStepCountText();
         updateStepstogoText();
+        updateDistanceText();
+        updateDistancetogoText();
         updatesteptarget();
         targetset.setEnabled(true);
         if (sensorDetect != null) {
@@ -165,11 +185,18 @@ stepstogo=inttarget-stepsdaily ;
         }
         if (lastTimestamp != null && hasNewDayStarted(lastTimestamp)) {
 
-            barEntriesArrayList.add(new BarEntry(i,stepsdaily));
-            stepsdaily = 0;
-            stepstogo = inttarget;i++;
+         /*   barEntriesArrayList.add(new BarEntry(i,stepsdaily));i++;
+            if(i==2)
+            {
+                barChart.setData(barData);i=0;
+            }*/
+            stepsdaily = 0;distance="0";
+            stepstogo = inttarget;
+            distancetogo=String.format("%.2f", (0.00074*stepstogo));//i++;
             updateStepCountText();
             updateStepstogoText();
+            updateDistanceText();
+            updateDistancetogoText();
         }
 
     }
@@ -182,6 +209,12 @@ stepstogo=inttarget-stepsdaily ;
 
     private void updateStepCountText() {
         stepdailyTextView.setText(String.valueOf(stepsdaily));
+    }
+    private void updateDistanceText() {
+        textviewdistance.setText(distance);
+    }
+    private void updateDistancetogoText() {
+        textviewdistancetogo.setText(distancetogo);
     }
     private void updateStepstogoText() {
         textviewstepstogo.setText(String.valueOf(stepstogo));
