@@ -21,6 +21,8 @@ public class bmiactivity extends AppCompatActivity {
     TextView mbmidisplay,magedisplay,mweightdisplay,mheightdisplay,mbmicategory,mgender;
     Button mgotomain;
     Button mgotocontents;
+    Button mgotoyoga;
+    Button mgotocalorie;
     Intent intent;
 
     ImageView mimageview;
@@ -59,6 +61,8 @@ public class bmiactivity extends AppCompatActivity {
         mbmicategory = findViewById(R.id.bmicategorydispaly);
         mgotomain=findViewById(R.id.gotomain);
         mgotocontents=findViewById(R.id.gotocontents);
+        mgotocontents=findViewById(R.id.gotoyoga);
+        mgotocontents=findViewById(R.id.gotocalorie);
 
         mimageview=findViewById(R.id.imageview);
 
@@ -156,7 +160,21 @@ public class bmiactivity extends AppCompatActivity {
             }
         });
 
+        mgotoyoga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(getApplicationContext(),yoga_select_pose.class);
+                startActivity(intent1);
+            }
+        });
 
+        mgotocalorie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(getApplicationContext(),caloriecounter.class);
+                startActivity(intent1);
+            }
+        });
 
 
 
