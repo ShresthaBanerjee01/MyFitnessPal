@@ -58,10 +58,10 @@
             android:name=".bmiactivity"
             android:exported="false" />
         <activity
-            android:name=".yoga_select_pose"
+            android:name=".aftersplash"
             android:exported="false" />
         <activity
-            android:name=".aftersplash"
+            android:name=".yoga_select_pose"
             android:exported="false" />
         <activity
             android:name=".hotels"

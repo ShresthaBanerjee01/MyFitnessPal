@@ -30,7 +30,7 @@
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/sarala"
                 android:text="Hello!"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:textColor="#616161"></TextView>
 
             <TextView
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/sarala"
                 android:text="Choose Your Activity"
                 android:textColor="#616161"
-                android:textSize="20dp"></TextView>
+                android:textSize="15dp"></TextView>
 
         </RelativeLayout>
 

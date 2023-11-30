@@ -1,7 +1,5 @@
 package com.example.myfitnesspal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,9 +12,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class bmiactivity extends AppCompatActivity {
 
-
+yoga_select_pose b = new yoga_select_pose();
 
     TextView mbmidisplay,magedisplay,mweightdisplay,mheightdisplay,mbmicategory,mgender;
     Button mgotomain;
@@ -60,9 +60,9 @@ public class bmiactivity extends AppCompatActivity {
         //    mweightdisplay=findViewById(R.id.weightdisplay);
         mbmicategory = findViewById(R.id.bmicategorydispaly);
         mgotomain=findViewById(R.id.gotomain);
-        mgotocontents=findViewById(R.id.gotocontents);
-        mgotocontents=findViewById(R.id.gotoyoga);
-        mgotocontents=findViewById(R.id.gotocalorie);
+       mgotocontents=findViewById(R.id.gotopedo);
+       mgotoyoga=findViewById(R.id.gotoyoga);
+       mgotocalorie=findViewById(R.id.gotocalorie);
 
         mimageview=findViewById(R.id.imageview);
 
@@ -148,15 +148,15 @@ public class bmiactivity extends AppCompatActivity {
         mgotomain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(),bmi.class);
+                Intent intent1=new Intent(getApplicationContext(),aftersplash.class);
                 startActivity(intent1);
             }
         });
-        mgotocontents.setOnClickListener(new View.OnClickListener() {
+      mgotocontents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(),aftersplash.class);
-                startActivity(intent1);
+                Intent intent2=new Intent(getApplicationContext(),pedometer.class);
+                startActivity(intent2);
             }
         });
 
@@ -168,7 +168,7 @@ public class bmiactivity extends AppCompatActivity {
             }
         });
 
-        mgotocalorie.setOnClickListener(new View.OnClickListener() {
+      mgotocalorie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent1=new Intent(getApplicationContext(),caloriecounter.class);

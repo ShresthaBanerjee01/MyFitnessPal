@@ -79,32 +79,14 @@ tools:context=".bmiactivity">
 
 
 
-<android.widget.Button
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:id="@+id/gotomain"
-    android:layout_below="@id/contentlayout"
-    android:layout_marginTop="50dp"
-    android:background="@drawable/buttonbackground"
-    android:text="RECALCULATE YOUR BMI"
-    android:textSize="15sp"
-    android:textColor="@color/white"
-    android:fontFamily="@font/raleway"
-    android:textStyle="bold"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    >
-
-</android.widget.Button>
-
     <android.widget.Button
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/gotocontents"
+        android:id="@+id/gotomain"
         android:layout_below="@id/contentlayout"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/buttonbackground"
-        android:text="GO BACK"
+        android:text="GO TO CONTENTS"
         android:textSize="15sp"
         android:textColor="@color/white"
         android:fontFamily="@font/raleway"
@@ -116,11 +98,28 @@ tools:context=".bmiactivity">
     </android.widget.Button>
 
     <android.widget.Button
+        android:id="@+id/gotopedo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/contentlayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="GO TO PEDOMETER"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold">
+
+    </android.widget.Button>
+
+    <android.widget.Button
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/gotoyoga"
-        android:layout_below="@id/gotocontents"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/contentlayout"
+        android:layout_marginTop="150dp"
         android:background="@drawable/buttonbackground"
         android:text="GO TO YOGA"
         android:textSize="15sp"
@@ -137,8 +136,8 @@ tools:context=".bmiactivity">
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/gotocalorie"
-        android:layout_below="@id/gotoyoga"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/contentlayout"
+        android:layout_marginTop="200dp"
         android:background="@drawable/buttonbackground"
         android:text="CALORIE COUNTER"
         android:textSize="15sp"
