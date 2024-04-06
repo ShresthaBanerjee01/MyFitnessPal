@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".doctors">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#D3F8E1">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stay healthy,\nFind care nearby"
+            android:textColor="#05386B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/stethoscope" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/physiotherapistImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/layout"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/physiotherapy"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/physiotherapistText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/physiotherapistImage"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Physiotherapist"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/psychiatristImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/physiotherapistText"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/psychiatrist"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/psychiatristText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/psychiatristImage"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="55dp"
+        android:text="Psychiatrist"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/nutritionistImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/physiotherapistText"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/dietitian"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"/>
+    <TextView
+        android:id="@+id/nutritionistText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nutritionistImage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="16dp"
+        android:text="Nutritionist"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</RelativeLayout>

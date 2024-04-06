@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".calories_burnt">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#D3F8E1">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track your burn,\nKnow your health"
+            android:textColor="#05386B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/caloriesb" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/layout"
+        android:textColor="#05386B"
+        android:textSize="20sp"
+        android:text="Activity"
+        android:padding="6dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="bold"/>
+    <RadioGroup
+        android:id="@+id/activityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/activity"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp">
+
+        <RadioButton
+            android:id="@+id/walkingRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Walking"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <RadioButton
+            android:id="@+id/joggingRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogging"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/runningRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+           />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/pace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#05386B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Pace/Speed"
+        android:padding="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_below="@id/activityGroup"/>
+    <RadioGroup
+        android:id="@+id/paceGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pace"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/slowRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slow"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/moderateRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderate"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/fastRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fast"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+           />
+
+        <RadioButton
+            android:id="@+id/veryFastRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Very Fast"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paceGroup"
+        android:layout_marginTop="15dp"
+        android:hint="Weight (kg)"
+        android:background="@drawable/border"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="#05386B"
+        android:textSize="15sp"
+        android:padding="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/timeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightInput"
+        android:layout_marginTop="15dp"
+        android:hint="Time (minutes)"
+        android:background="@drawable/border"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#05386B"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <android.widget.Button
+        android:id="@+id/calculateButton"
+        android:layout_width="110dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbackground"
+        android:textColor="@color/white"
+        android:fontFamily="@font/raleway"
+        android:textStyle="bold"
+        android:layout_below="@id/timeInput"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+<TextView
+    android:id="@+id/comment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="* This is just an estimation *"
+    android:layout_below="@id/resultText"
+    android:layout_marginTop="15dp"
+    android:paddingLeft="5dp"
+    android:textColor="@color/black"/>
+
+</RelativeLayout>
