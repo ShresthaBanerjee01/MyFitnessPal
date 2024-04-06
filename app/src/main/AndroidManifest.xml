@@ -4,6 +4,12 @@
 
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyA4aUBQwuaRS-PVtnxqY4ukPOgo8wDuZrQ" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,12 +20,26 @@
         android:theme="@style/Theme.MyFitnessPal"
         tools:targetApi="31">
         <activity
+            android:name=".psychiatrist"
+            android:exported="false" />
+        <activity
+            android:name=".physiotherapist"
+            android:exported="false" />
+        <activity
+            android:name=".nutritionist"
+            android:exported="false" />
+        <activity
+            android:name=".doctors"
+            android:exported="false" />
+        <activity
+            android:name=".calories_burnt"
+            android:exported="false" />
+        <activity
             android:name=".temples"
             android:exported="false" />
         <activity
             android:name=".hillstations"
             android:exported="false" />
-
         <activity
             android:name=".Safaris"
             android:exported="false" />
@@ -32,7 +52,6 @@
         <activity
             android:name=".beaches"
             android:exported="false" />
-
         <activity
             android:name=".caloriecounter"
             android:exported="false" />
@@ -58,10 +77,10 @@
             android:name=".bmiactivity"
             android:exported="false" />
         <activity
-            android:name=".aftersplash"
+            android:name=".yoga_select_pose"
             android:exported="false" />
         <activity
-            android:name=".yoga_select_pose"
+            android:name=".aftersplash"
             android:exported="false" />
         <activity
             android:name=".hotels"

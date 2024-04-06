@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3F8E1"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,18 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <com.google.android.material.textview.MaterialTextView
+        <RelativeLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Calories Calculator"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="100dp"
+            android:background="#D3F8E1">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track your calories effortlessly"
+                android:textColor="#05386B"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/raleway"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/caloriecounter" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,13 +52,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:hint="Enter weight (kg)">
+                android:hint="Enter weight (kg)"
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/weight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -49,13 +69,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:hint="Enter Height (cm)">
+                android:hint="Enter Height (cm)"
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/height"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -70,13 +93,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:hint="Enter Age">
+                android:hint="Enter Age"
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <RadioGroup
@@ -133,7 +159,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/cardview_dark_background"
-                android:textSize="50sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -191,7 +217,7 @@
 
                 </TableRow>
 
-                <TableRow android:background="#b1ccbd">
+                <TableRow android:background="#D3F8E1">
 
                     <TextView
                         android:layout_width="0dp"
@@ -217,7 +243,7 @@
 
                 </TableRow>
 
-                <TableRow android:background="#88a2a8">
+                <TableRow android:background="@color/white">
 
                     <TextView
                         android:layout_width="0dp"
@@ -244,7 +270,7 @@
                 </TableRow>
 
 
-                <TableRow android:background="#b1ccbd">
+                <TableRow android:background="#D3F8E1">
 
                     <TextView
                         android:layout_width="0dp"
@@ -270,7 +296,7 @@
 
                 </TableRow>
 
-                <TableRow android:background="#88a2a8">
+                <TableRow android:background="@color/white">
 
                     <TextView
                         android:layout_width="0dp"
@@ -296,7 +322,7 @@
 
                 </TableRow>
 
-                <TableRow android:background="#b1ccbd">
+                <TableRow android:background="#D3F8E1">
 
                     <TextView
                         android:layout_width="0dp"
@@ -322,7 +348,7 @@
 
                 </TableRow>
 
-                <TableRow android:background="#88a2a8">
+                <TableRow android:background="@color/white">
 
                     <TextView
                         android:layout_width="0dp"

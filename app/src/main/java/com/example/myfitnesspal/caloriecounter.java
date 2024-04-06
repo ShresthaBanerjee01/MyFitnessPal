@@ -2,13 +2,14 @@
 package com.example.myfitnesspal;
 
 // Importing the required libraries
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -33,7 +34,7 @@ public class caloriecounter extends AppCompatActivity {
 
         // Setting the content view to the activity_main.xml file
         setContentView(R.layout.activity_caloriecounter);
-
+        getSupportActionBar().hide();
         // Initializing the variables
         age = findViewById(R.id.age);
         height = findViewById(R.id.height);
@@ -170,7 +171,7 @@ public class caloriecounter extends AppCompatActivity {
         if(gender.getCheckedRadioButtonId()== male.getId()){
             // If user is "Male" then the following formula will be used to calculate the calories
             totalCalories = (10 * weightValue) + (6.25 * heightValue) - (5 * ageValue + 5);
-
+            calories.setText(String.format("%.2f", totalCalories)+"*");
             // Setting the text to the calories text view
             text_dummy.setVisibility(View.VISIBLE);
 

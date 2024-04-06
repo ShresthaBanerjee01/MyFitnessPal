@@ -1,12 +1,11 @@
 package com.example.myfitnesspal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 public class wellness extends AppCompatActivity {
     ImageButton pedo;
     ImageButton caloriecounter;
@@ -14,7 +13,7 @@ public class wellness extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wellness);
-
+        getSupportActionBar().hide();
          pedo=(ImageButton)findViewById(R.id.pedometer);
         caloriecounter=(ImageButton)findViewById(R.id.caloriecount);
         pedo.setOnClickListener(new View.OnClickListener() {

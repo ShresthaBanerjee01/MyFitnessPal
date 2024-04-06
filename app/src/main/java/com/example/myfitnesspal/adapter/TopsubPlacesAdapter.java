@@ -37,8 +37,8 @@ public class TopsubPlacesAdapter extends RecyclerView.Adapter<TopsubPlacesAdapte
 
         holder.placeName.setText(topsubPlacesDataList.get(position).getPlaceName());
         holder.placeDes.setText(topsubPlacesDataList.get(position).getPlaceDes());
-        holder.placeImage.setImageResource(topsubPlacesDataList.get(position).getImageUrl());
-        holder.bestseason.setText(topsubPlacesDataList.get(position).getBestSeason());
+       // holder.placeImage.setImageResource(topsubPlacesDataList.get(position).getImageUrl());
+        //holder.bestseason.setText(topsubPlacesDataList.get(position).getBestSeason());
         }
     @Override
     public int getItemCount() {

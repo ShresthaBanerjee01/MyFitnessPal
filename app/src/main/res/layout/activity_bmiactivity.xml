@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:id="@+id/background"
-android:background="#D3F8E1"
+android:background="@color/white"
 tools:context=".bmiactivity">
 
 
@@ -22,78 +22,73 @@ tools:context=".bmiactivity">
 </ImageView>
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:id="@+id/contentlayout"
-    android:background="@drawable/cardbackgroung"
-    android:layout_centerInParent="true">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:padding="20dp">
 
-        android:textColor="@color/black"
-        android:id="@+id/bmidisplay"
-        android:text="22">
+        <TextView
+            android:id="@+id/bmidisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="22"
 
-    </TextView>
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender"
-        android:layout_marginTop="15dp"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:layout_below="@id/bmidisplay"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        android:id="@+id/genderdisplay" />
+        </TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your BMI Category Is"
-        android:textStyle="bold"
-        android:id="@+id/bmicategorydispaly"
-        android:textColor="@color/black"
-        android:fontFamily="@font/raleway"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/genderdisplay"
-        android:textSize="25sp">
+        <TextView
+            android:id="@+id/genderdisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bmidisplay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Gender"
+            android:textColor="#05386B"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
-    </TextView>
+        <TextView
+            android:id="@+id/bmicategorydispaly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderdisplay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/raleway"
+            android:text="Your BMI Category Is"
+            android:textColor="#05386B"
+            android:textSize="25sp"
+            android:textStyle="bold">
 
-
-
-
+        </TextView>
 
 
-</RelativeLayout>
-
+    </RelativeLayout>
 
 
     <android.widget.Button
+        android:id="@+id/gotomain"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/gotomain"
         android:layout_below="@id/contentlayout"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/buttonbackground"
-        android:text="GO TO CONTENTS"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/raleway"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        >
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="GO TO CONTENTS"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck">
 
     </android.widget.Button>
 
@@ -110,43 +105,44 @@ tools:context=".bmiactivity">
         android:text="GO TO PEDOMETER"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck">
 
     </android.widget.Button>
 
     <android.widget.Button
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:id="@+id/gotoyoga"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_below="@id/contentlayout"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/buttonbackground"
-        android:text="GO TO YOGA"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/raleway"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
         android:layout_marginRight="20dp"
-        >
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="GO TO YOGA"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck">
 
     </android.widget.Button>
 
     <android.widget.Button
+        android:id="@+id/gotocalorie"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/gotocalorie"
         android:layout_below="@id/contentlayout"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/buttonbackground"
-        android:text="CALORIE COUNTER"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/raleway"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp"
         android:layout_marginRight="20dp"
-        >
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="CALORIE COUNTER"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck">
 
     </android.widget.Button>
 

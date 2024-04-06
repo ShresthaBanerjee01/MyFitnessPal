@@ -13,7 +13,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -50,7 +49,7 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
     private int  stepDetect = 0 ,stepsdaily=0 , stepstogo =0;
     /*i=0*/;
     private Calendar lastTimestamp;
-    Button calorieburnt; BarChart barChart;
+    ImageButton calorieburnt; BarChart barChart;
     BarData barData;
     BarDataSet barDataSet;
     ArrayList barEntriesArrayList;
@@ -59,8 +58,8 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedometer);
-
-        calorieburnt=findViewById(R.id.calBurnt);
+        getSupportActionBar().hide();
+        calorieburnt=(ImageButton) findViewById(R.id.calBurnt);
         save=findViewById(R.id.targetid);
         /*barChart = findViewById(R.id.idBarChart);
         barEntriesArrayList = new ArrayList<>();
@@ -110,7 +109,7 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
         calorieburnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(pedometer.this,caloriecounter.class);
+                Intent intent = new Intent(pedometer.this,calories_burnt.class);
                 startActivity(intent);
             }
         });

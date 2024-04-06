@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3F8E1"
+    android:background="@color/white"
     tools:context=".bmi">
 
     <RelativeLayout
@@ -21,12 +22,44 @@
 
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#D3F8E1">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measure your health,\nCalculate your BMI"
+            android:textColor="#05386B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bmi" />
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_toStartOf="@id/centerverticalline"
-        android:background="@drawable/cardbackgroung"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout"
         android:layout_above="@id/heightlayout"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/male">
@@ -51,7 +84,6 @@
             android:fontFamily="@font/raleway"
             android:id="@+id/textmale"
             android:textStyle="bold"
-
             android:textAlignment="center"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp">
@@ -62,11 +94,13 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_above="@id/heightlayout"
-        android:layout_marginBottom="35dp"
+        android:layout_below="@id/layout"
+        android:layout_marginBottom="25dp"
         android:layout_marginRight="20dp"
         android:layout_toEndOf="@id/centerverticalline"
-        android:background="@drawable/cardbackgroung"
+        android:background="@color/white"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/female">
 
         <ImageView
@@ -88,7 +122,6 @@
             android:fontFamily="@font/raleway"
             android:id="@+id/textfemale"
             android:textStyle="bold"
-
             android:textAlignment="center"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp">
@@ -99,11 +132,11 @@
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="340dp"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:layout_above="@id/centerhorizontalline"
-        android:layout_marginBottom="-50dp"
+        android:layout_marginBottom="-70dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/cardbackgroung"
+        android:background="@color/white"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:id="@+id/heightlayout">
@@ -115,8 +148,7 @@
             android:text="Height"
             android:fontFamily="@font/raleway"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-
+            android:textColor="#05386B"
             android:textSize="20sp">
 
         </TextView>
@@ -160,37 +192,38 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
-            android:progressTint="#FFFFFFFF"
+            android:progressTint="@color/black"
             android:thumbTint="#FF018786">
 
         </SeekBar>
 
     </RelativeLayout>
+
     <android.widget.Button
+        android:id="@+id/calculatebmi"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/calculatebmi"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/buttonbackground"
-        android:text="Calculate Your BMI"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/raleway"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        >
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/raleway"
+        android:text="Calculate Your BMI"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck">
 
     </android.widget.Button>
     <RelativeLayout
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_toStartOf="@id/centerverticalline"
-        android:background="@drawable/cardbackgroung"
+        android:background="@color/white"
         android:layout_below="@id/heightlayout"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="95dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/weight">
@@ -201,7 +234,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="@color/black"
+            android:textColor="#05386B"
             android:text="Weight"
             android:fontFamily="@font/raleway"
             android:id="@+id/textweight"
@@ -273,10 +306,10 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_toEndOf="@id/centerverticalline"
-        android:background="@drawable/cardbackgroung"
+        android:background="@color/white"
         android:layout_below="@id/heightlayout"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="95dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/Age">
@@ -289,7 +322,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="@color/black"
+            android:textColor="#05386B"
             android:text="Age"
             android:fontFamily="@font/raleway"
             android:layout_marginTop="15dp"

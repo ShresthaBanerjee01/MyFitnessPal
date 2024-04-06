@@ -1,183 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".aftersplash"
-    android:background="@drawable/bg1">
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#D3F8E1">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empower your health,\nWith MyFitnessPal."
+            android:textColor="#05386B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/group" />
+    </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="0dp">
+        android:layout_below="@id/layout"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+            <!-- ImageButton 1 -->
+            <ImageButton
+                android:id="@+id/Button1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image1"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/textView1"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Button1"
+                android:layout_alignStart="@id/Button1"
+                android:text="B.M.I"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="241dp"
-                android:layout_marginBottom="40dp"
-                android:fontFamily="@font/sarala"
-                android:text="Hello!"
-                android:textSize="20dp"
-                android:textColor="#616161"></TextView>
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"/>
+
+            <!-- ImageButton 2 -->
+            <ImageButton
+                android:id="@+id/Button2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image2"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_alignBottom="@+id/textview1"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="187dp"
-                android:layout_marginTop="110dp"
-                android:layout_marginBottom="-40dp"
-                android:fontFamily="@font/sarala"
-                android:text="Choose Your Activity"
-                android:textColor="#616161"
-                android:textSize="15dp"></TextView>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Button2"
+                android:layout_alignStart="@id/Button2"
+                android:text="Yoga"
+                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"/>
+
+            <!-- ImageButton 3 -->
+            <ImageButton
+                android:id="@+id/Button3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image3"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Button3"
+                android:layout_alignStart="@id/Button3"
+                android:text="Out and Up"
+                android:layout_marginStart="20dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"/>
+
+            <!-- ImageButton 4 -->
+            <ImageButton
+                android:id="@+id/Button4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image4"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Button4"
+                android:layout_alignStart="@id/Button4"
+                android:text="Wellness"
+                android:layout_marginStart="25dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"/>
+
+            <!-- ImageButton 5 -->
+            <ImageButton
+                android:id="@+id/Button5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/textView4"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Button5"
+                android:layout_alignStart="@id/Button5"
+                android:text="Doctors"
+                android:layout_marginStart="30dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                />
 
         </RelativeLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center"
-                android:outlineProvider="none">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button1"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_above="@+id/button2"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
-                    android:text="B.M.I"
-                    android:textColor="#b1ccbd"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="100dp">
-
-                </androidx.appcompat.widget.AppCompatButton>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center"
-                android:outlineProvider="none">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button2"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_above="@+id/button2"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
-                    android:text="Yoga"
-                    android:textAllCaps="false"
-                    android:textColor="#b1ccbd"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="100dp">
-
-                </androidx.appcompat.widget.AppCompatButton>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center"
-                android:outlineProvider="none">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button3"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
-                    android:text="Out and Up"
-                    android:textAllCaps="false"
-                    android:textColor="#b1ccbd"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="100dp">
-
-                </androidx.appcompat.widget.AppCompatButton>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center"
-                android:outlineProvider="none">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button4"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_above="@+id/button2"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
-                    android:text="Wellness"
-                    android:textAllCaps="false"
-                    android:textColor="#b1ccbd"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="100dp">
-
-                </androidx.appcompat.widget.AppCompatButton>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center"
-                android:outlineProvider="none">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button5"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_above="@+id/button2"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/custom_button"
-                    android:text="Doctors"
-                    android:textAllCaps="false"
-                    android:textColor="#b1ccbd"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="100dp">
-
-                </androidx.appcompat.widget.AppCompatButton>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>

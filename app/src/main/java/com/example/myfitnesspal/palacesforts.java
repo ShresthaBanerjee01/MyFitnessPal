@@ -25,13 +25,18 @@ public class palacesforts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palacesforts);
+        getSupportActionBar().hide();
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"Be it on a honeymoon tour, vacation with family members or an outing with friends, fun and liveliness never ceases to stop in Pahalgam. It is in this scenic hill station, you can feel and experience all the true colours of the nature at its best.Be it on a honeymoon tour, vacation with family members or an outing with friends, fun and liveliness never ceases to stop in Pahalgam. It is in this scenic hill station, you can feel and experience all the true colours of the nature at its best.","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"A","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"B","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"C","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"D","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"E","October"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Red Fort, Delhi",R.drawable.hillstation_tp,"Red Fort is an iconic UNESCO World Heritage Site, showcasing Mughal architecture with red sandstone walls, marble palaces, and intricate ornamentation, serving as the backdrop for India's Independence Day celebrations, offering a glimpse into Delhi's rich history. Best visited from October to March.\n" +
+                "Tourist spots: Jama Masjid, Chandni Chowk, Raj Ghat, Qutub Minar.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Amber Fort, Rajasthan",R.drawable.hillstation_tp,"Amber Fort is a majestic hilltop fort and palace complex, showcasing Rajput architecture, intricate carvings, and stunning views of Maota Lake, offering a glimpse into Rajasthan's royal heritage. Best visited from October to March.\n" +
+                "Tourist spots: Sheesh Mahal (Mirror Palace), Jaigarh Fort, Jal Mahal, Nahargarh Fort.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Mysore Palace, Karnataka",R.drawable.hillstation_tp,"Mysore Palace is a magnificent Indo-Saracenic architectural marvel, adorned with intricate carvings, ornate ceilings, and stained glass windows, showcasing the opulence of the Wadiyar dynasty, especially during the grand Dasara celebrations. Best visited from October to March.\n" +
+                "Tourist spots: Brindavan Gardens, Chamundi Hill, St. Philomena's Cathedral, Mysore Zoo.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Junagarh Fort, Rajasthan",R.drawable.hillstation_tp,"Junagarh Fort is an imposing fortress showcasing a blend of Rajput, Gujarati, and Mughal architectural styles, featuring palaces, temples, and museums, offering a fascinating journey through Bikaner's history and culture. Best visited from October to March.\n" +
+                "Tourist spots: Lalgarh Palace, Karni Mata Temple (Rat Temple), National Research Centre on Camel.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Jaisalmer Fort, Rajasthan",R.drawable.hillstation_tp,"Jaisalmer Fort is a massive sandstone fort rising majestically from the Thar Desert, housing palaces, temples, and havelis adorned with intricate carvings and balconies, offering a surreal experience of living history amidst golden sands. Best visited from October to March.\n" +
+                "Tourist spots: Patwon ki Haveli, Gadisar Lake, Desert Safari, Sam Sand Dunes.","November"));
         setTopPlacesRecycler(topsubPlacesDataList);
         btnClick=findViewById(R.id.nextbtn);
         btnClick1=findViewById(R.id.prevbtn);

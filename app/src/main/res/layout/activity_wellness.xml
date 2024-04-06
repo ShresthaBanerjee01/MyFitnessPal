@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@color/white"
     tools:context=".wellness">
-    <TextView
-        android:id="@+id/textView3"
+    <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
+        android:layout_height="110dp"
+        android:background="#D3F8E1">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Embrace wellness,\nLive vibrantly"
+            android:textColor="#05386B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/healthy" />
+    </RelativeLayout>
 
-        android:layout_marginBottom="570dp"
-        android:text="CHECK YOUR DAILY FITNESS"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="#05386B"
-         />
 
     <ImageButton
         android:id="@+id/pedometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="326dp"
-        android:background="#D3F8E1"
-        android:padding="20dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="110dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_below="@id/layout"
         android:src="@drawable/pedometer"
-        />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/caloriecount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="134dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="62dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/pedometer"
         android:background="@color/white"
-        android:padding="20dp"
-        android:src="@drawable/calories" />
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/calories_count"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </RelativeLayout>

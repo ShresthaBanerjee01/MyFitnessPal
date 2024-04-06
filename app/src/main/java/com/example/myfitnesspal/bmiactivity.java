@@ -52,7 +52,7 @@ yoga_select_pose b = new yoga_select_pose();
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
         getSupportActionBar().setTitle("Result");
-
+        getSupportActionBar().hide();
 
         intent=getIntent();
         mbmidisplay=findViewById(R.id.bmidisplay);

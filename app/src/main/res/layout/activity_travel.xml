@@ -25,25 +25,14 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="22dp"
             android:fontFamily="@font/raleway"
-            android:text="Find Your"
+            android:text="Explore the world,\nOne trip at a time"
             android:textColor="#05386B"
             android:textStyle="bold"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/raleway"
-            android:text="Next Destination"
-            android:textColor="#05386B"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
         <ImageView
             android:id="@+id/imageView"
@@ -55,29 +44,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/profile" />
  </androidx.constraintlayout.widget.ConstraintLayout>
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/raleway"
-        android:text="Top Places"
-        android:textStyle="bold"
-        android:textColor="#05386B"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
 
         <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/top_places_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         />
     <LinearLayout
         android:id="@+id/hide_show"
@@ -93,8 +69,8 @@
 
         <ImageView
             android:id="@+id/hotels"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/hotel" />
 

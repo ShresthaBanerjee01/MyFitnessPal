@@ -25,6 +25,7 @@ ImageView hotels;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
+        getSupportActionBar().hide();
 hotels = findViewById(R.id.hotels);
 hotels.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -46,12 +47,12 @@ hotels.setOnClickListener(new View.OnClickListener() {
         // setRecentRecycler(recentsDataList);
 
         List<TopPlacesData> topPlacesDataList = new ArrayList<>();
-        topPlacesDataList.add(new TopPlacesData("Hill Stations", R.drawable.hillstation_tp));
-        topPlacesDataList.add(new TopPlacesData("Beaches", R.drawable.beaches_tp));
-        topPlacesDataList.add(new TopPlacesData("Safaris",  R.drawable.safaris_tp));
-        topPlacesDataList.add(new TopPlacesData("Magnificent Cities", R.drawable.cities_tp));
-        topPlacesDataList.add(new TopPlacesData("Palaces & Forts", R.drawable.forts_tp));
-        topPlacesDataList.add(new TopPlacesData("Temples", R.drawable.temples_tp));
+        topPlacesDataList.add(new TopPlacesData("Hill Stations", R.drawable.mountain));
+        topPlacesDataList.add(new TopPlacesData("Beaches", R.drawable.beach));
+        topPlacesDataList.add(new TopPlacesData("Safaris",  R.drawable.safari));
+        topPlacesDataList.add(new TopPlacesData("Magnificent Cities", R.drawable.skyscraper));
+        topPlacesDataList.add(new TopPlacesData("Palaces & Forts", R.drawable.palace));
+        topPlacesDataList.add(new TopPlacesData("Temples", R.drawable.temple));
 
 
 

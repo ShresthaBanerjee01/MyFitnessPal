@@ -25,13 +25,18 @@ public class magnificientcities extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_magnificientcities);
+        getSupportActionBar().hide();
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"Be it on a honeymoon tour, vacation with family members or an outing with friends, fun and liveliness never ceases to stop in Pahalgam. It is in this scenic hill station, you can feel and experience all the true colours of the nature at its best.Be it on a honeymoon tour, vacation with family members or an outing with friends, fun and liveliness never ceases to stop in Pahalgam. It is in this scenic hill station, you can feel and experience all the true colours of the nature at its best.","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"A","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"B","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"C","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"D","October"));
-        topsubPlacesDataList.add(new TopsubPlacesData("Hill Stations",R.drawable.hillstation_tp,"E","October"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Jaipur, Rajasthan",R.drawable.hillstation_tp,"Known as the Pink City, Jaipur is famous for its majestic forts, vibrant bazaars, and rich cultural heritage, offering a glimpse into Rajasthan's royal past. Best visited from October to March.\n" +
+                "Tourist spots: Amber Fort, City Palace, Hawa Mahal, Jantar Mantar, Nahargarh Fort.\n","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Varanasi, Uttar Pradesh",R.drawable.hillstation_tp,"Varanasi, one of the oldest continuously inhabited cities in the world, is a spiritual hub on the banks of the sacred Ganges River, known for its ghats, temples, and vibrant cultural traditions. Best visited from October to March.\n" +
+                "Tourist spots: Dashashwamedh Ghat, Kashi Vishwanath Temple, Sarnath, Manikarnika Ghat, Assi Ghat.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Udaipur, Rajasthan",R.drawable.hillstation_tp,"Udaipur, often referred to as the Venice of the East, is famed for its enchanting lakes, palaces, and romantic ambiance, offering a picturesque setting for a royal experience. Best visited from September to March.\n" +
+                "Tourist spots: City Palace, Lake Pichola, Jag Mandir, Fateh Sagar Lake, Saheliyon ki Bari.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Mumbai, Maharashtra",R.drawable.hillstation_tp,"Mumbai, the bustling metropolis and financial capital of India, is a melting pot of cultures, offering a vibrant nightlife, colonial architecture, and iconic landmarks along the Arabian Sea coast. Best visited from October to March.\n" +
+                "Tourist spots: Gateway of India, Marine Drive, Elephanta Caves, Chhatrapati Shivaji Maharaj Terminus, Juhu Beach.","November"));
+        topsubPlacesDataList.add(new TopsubPlacesData("Kolkata, West Bengal",R.drawable.hillstation_tp,"Kolkata, the cultural capital of India, exudes colonial charm with its grand architecture, literary heritage, and artistic fervor, offering a glimpse into the city's rich history and vibrant culture. Best visited from October to March.\n" +
+                "Tourist spots: Victoria Memorial, Howrah Bridge, Belur Math, Dakshineswar Kali Temple, Indian Museum.","November"));
         setTopPlacesRecycler(topsubPlacesDataList);
         btnClick=findViewById(R.id.nextbtn);
         btnClick1=findViewById(R.id.prevbtn);
