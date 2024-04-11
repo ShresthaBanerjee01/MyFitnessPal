@@ -32,8 +32,9 @@ yoga_select_pose b = new yoga_select_pose();
 
     String height;
     String weight;
+    String age,gender;
 
-    float intheight,intweight;
+    float intheight,intweight;int intage;
 
     RelativeLayout mbackground;
 
@@ -73,10 +74,12 @@ yoga_select_pose b = new yoga_select_pose();
 
         height=intent.getStringExtra("height");
         weight=intent.getStringExtra("weight");
-
+        age=intent.getStringExtra("age");
+        gender=intent.getStringExtra("gender");
 
         intheight=Float.parseFloat(height);
         intweight=Float.parseFloat(weight);
+        intage=Integer.parseInt(age);
 
         intheight=intheight/100;
         intbmi=intweight/(intheight*intheight);
@@ -84,7 +87,7 @@ yoga_select_pose b = new yoga_select_pose();
 
         mbmi=Float.toString(intbmi);
         System.out.println(mbmi);
-
+if(intage>18){
         if(intbmi<16)
         {
             mbmicategory.setText("Severe Thinness");
@@ -133,14 +136,43 @@ yoga_select_pose b = new yoga_select_pose();
         else
         {
             mbmicategory.setText("Obese Class II");
-            mbackground.setBackgroundColor(R.color.warn);
+            mbackground.setBackgroundColor(Color.RED);
             mimageview.setImageResource(R.drawable.crosss);
             //  mimageview.setBackground(colorDrawable2);
         }
+}
+else
+{
+    String bmiInterpretation = interpretBMI(intage, gender, intbmi);
+    if(bmiInterpretation.equals("Uw"))
+    {
+        mbmicategory.setText("Underweight");
 
-        //magedisplay.setText("your age is"+intent.getStringExtra("age"));
-        //mheightdisplay.setText("Your Height is "+intent.getStringExtra("height"));
-        //mweightdisplay.setText("Your Weight is "+intent.getStringExtra("weight"));
+        mbackground.setBackgroundColor(Color.RED);
+        mimageview.setImageResource(R.drawable.crosss);
+    }
+    else if(bmiInterpretation.equals("Nw"))
+    {
+        mbmicategory.setText("Normal");
+        mimageview.setImageResource(R.drawable.ok);
+    }
+    else if (bmiInterpretation.equals("Ow"))
+    {
+        mbmicategory.setText("Overweight");
+        mbackground.setBackgroundColor(R.color.halfwarn);
+        mimageview.setImageResource(R.drawable.warning);
+    }
+    else
+    {
+        mbmicategory.setText("Obesity");
+        mbackground.setBackgroundColor(Color.RED);
+        mimageview.setImageResource(R.drawable.crosss);
+
+    }
+}
+
+
+
         mgender.setText(intent.getStringExtra("gender"));
         mbmidisplay.setText(mbmi);
 
@@ -176,9 +208,87 @@ yoga_select_pose b = new yoga_select_pose();
             }
         });
 
+    }
+    private static String interpretBMI(int age, String sex, float bmi) {
 
 
+        // BMI percentiles based on age and sex
+        double[][] bmiPercentilesmale = {
+                // Age in years: 2-18
+                // Boys: 5th,85th,95th percentiles for 2 to 4
+                {14.2, 17.4, 18.3}, // Age 2
+                {13.7,17.0,17.8}, // Age 3
+                {13.4,16.7,17.6},// Age 4
+                {12.4,15.7,17.5},// Age 5
+                {12.5,16.0,	17.8},// Age 6
+                {12.6,16.3,18.2},// Age 7
+                {12.8,16.7,18.8},// Age 8
+                {13.0,17.3,	19.6},// Age 9
+                {13.2,18.0,	20.5},// Age 10
+                {13.5,18.7,21.5},// Age 11
+                {13.8,19.5,22.6},// Age 12
+                {14.0,20.2,23.4},// Age 13
+                {14.3,20.8,24.2},// Age 14
+                {14.7,21.4,24.9},// Age 15
+                {15.1,22.0,25.5},// Age 16
+                {15.6,22.6,26.0},// Age 17
+                {16.2,23.2,26.6}// Age 18
+        };
+        double[][] bmiPercentilesfemale = {
+                // Age in years: 2-18
+                // Girls: 5th,85th,95th percentiles for 2-4 and 5th ,
+                {13.7, 17.2, 18.1}, // Age 2
+                {13.5,16.9,17.8}, // Age 3
+                {13.2,16.8,17.9},//Age 4
+                {12.1,15.5,18.0},// Age 5
+                {12.2,15.9,18.6},// Age 6
+                {12.4,16.4,19.3},// Age 7
+                {12.6,16.9,20.1},// Age 8
+                {12.8,17.6,21.0},// Age 9
+                {13.1,18.4,21.9},// Age 10
+                {13.4,19.3,23.0},// Age 11
+                {13.9,20.2,24.1},// Age 12
+                {14.4,21.1,25.2},// Age 13
+                {14.9,21.8,25.9},// Age 14
+                {15.2,22.3,26.3},// Age 15
+                {15.6,22.6,26.5},// Age 16
+                {16.0,22.9,26.7},// Age 17
+                {16.3,23.2,26.8}// Age 18
 
+        };
 
+        int ageIndexmale = Math.min(Math.max(age - 2, 0), bmiPercentilesmale.length - 1);
+        int ageIndexfemale = Math.min(Math.max(age - 2, 0), bmiPercentilesfemale.length - 1);// Adjust for array indexing
+        String cate;
+
+        if (sex.equals("Male")) {
+            // Boys
+            cate = getPercentileIndex(bmi, bmiPercentilesmale[ageIndexmale]);
+        } else  {
+            // Girls
+            cate = getPercentileIndex(bmi, bmiPercentilesfemale[ageIndexfemale]);
+        }
+return cate;
+        // Interpretation based on BMI percentiles
+
+    }
+
+    private static String getPercentileIndex(double bmi, double[] percentiles) {
+        String r;
+        if(bmi<percentiles[0])
+        {
+            r="Uw";
+        }
+        else if(bmi>=percentiles[0]&&bmi<percentiles[1])
+        {
+            r="Nw";
+        }
+        else if (bmi>=percentiles[1]&&bmi<percentiles[2]) {
+           r ="Ow";
+        }
+        else {
+            r="Ob";
+        }
+        return r;
     }
 }

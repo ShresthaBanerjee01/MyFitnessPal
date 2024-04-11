@@ -1,6 +1,4 @@
 package com.example.myfitnesspal;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +10,9 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class bmi extends AppCompatActivity {
 
@@ -153,11 +154,16 @@ public class bmi extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"Age is Incorrect",Toast.LENGTH_SHORT).show();
                 }
+                else if(intage==1)
+                {
+                    Toast.makeText(getApplicationContext(),"Age more than 1 is accepted",Toast.LENGTH_SHORT).show();
+                }
 
                 else if(intweight==0|| intweight<0)
                 {
                     Toast.makeText(getApplicationContext(),"Weight Is Incorrect",Toast.LENGTH_SHORT).show();
                 }
+
                 else {
 
                     Intent intent = new Intent(bmi.this, bmiactivity.class);
