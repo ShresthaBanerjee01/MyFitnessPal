@@ -22,7 +22,11 @@ public class hillstations extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hillstations);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Manali, Himachal Pradesh",R.drawable.hillstation_tp,"Manali is a popular destination nestled in the Himalayas, offering stunning landscapes, adventure sports, and vibrant culture. Best visited from March to June and September to October.\n" + "Tourist spots: Solang Valley, Rohtang Pass, Hadimba Temple, Old Manali, Manu Temple.","November"));
         topsubPlacesDataList.add(new TopsubPlacesData("Darjeeling, West Bengal",R.drawable.hillstation_tp,"Famous for its tea plantations and panoramic views of the Himalayas, Darjeeling offers a serene retreat amidst nature. Best visited from March to May and September to November.\n" +

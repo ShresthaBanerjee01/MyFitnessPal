@@ -34,7 +34,11 @@ public class caloriecounter extends AppCompatActivity {
 
         // Setting the content view to the activity_main.xml file
         setContentView(R.layout.activity_caloriecounter);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         // Initializing the variables
         age = findViewById(R.id.age);
         height = findViewById(R.id.height);

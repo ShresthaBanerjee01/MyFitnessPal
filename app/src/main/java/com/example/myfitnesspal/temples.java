@@ -23,7 +23,11 @@ public class temples extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temples);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Golden Temple, Punjab",R.drawable.hillstation_tp,"The Golden Temple is the holiest shrine of Sikhism, known for its stunning architecture, sacred pond, and spiritual ambiance, attracting millions of devotees and visitors every year. Best visited throughout the year, but especially during religious festivals.\n" +
                 "Tourist spots: Jallianwala Bagh, Wagah Border, Partition Museum.","November"));

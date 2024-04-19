@@ -13,8 +13,12 @@ public class wellness extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wellness);
-        getSupportActionBar().hide();
-         pedo=(ImageButton)findViewById(R.id.pedometer);
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
+        pedo=(ImageButton)findViewById(R.id.pedometer);
         caloriecounter=(ImageButton)findViewById(R.id.caloriecount);
         pedo.setOnClickListener(new View.OnClickListener() {
             @Override

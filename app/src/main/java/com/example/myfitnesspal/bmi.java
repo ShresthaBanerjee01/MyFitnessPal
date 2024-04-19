@@ -37,8 +37,9 @@ public class bmi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bmi);
-
-        getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         mcurrentage=findViewById(R.id.currentage);
         mcurrentweight=findViewById(R.id.currentweight);
         mcurrentheight=findViewById(R.id.currentheight);

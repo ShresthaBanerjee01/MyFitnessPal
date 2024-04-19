@@ -19,7 +19,10 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         Intent intent= getIntent();
         buttonValue=intent.getStringExtra("Value");
 
@@ -80,9 +83,11 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
     private void stopTimer() {
-        countDownTimer.cancel();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+            countDownTimer = null;
         mTimerRunning=false;
-        startBtn.setText("Start");
+        startBtn.setText("Start");}
     }
 
     private void startTimer()

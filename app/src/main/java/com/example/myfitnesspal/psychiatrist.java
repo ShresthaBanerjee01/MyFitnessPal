@@ -34,7 +34,11 @@ public class psychiatrist extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_psychiatrist);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         readExcelFileFromAssets();
         placeEditText = findViewById(R.id.placeEditText);
         searchButton = findViewById(R.id.searchButton);

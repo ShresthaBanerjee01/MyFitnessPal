@@ -21,7 +21,11 @@ public class calories_burnt extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calories_burnt);
-        getSupportActionBar().hide();
+      //  getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         weightInput = findViewById(R.id.weightInput);
         timeInput = findViewById(R.id.timeInput);
         activityGroup = findViewById(R.id.activityGroup);

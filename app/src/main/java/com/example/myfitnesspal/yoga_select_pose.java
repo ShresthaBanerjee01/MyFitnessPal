@@ -14,7 +14,11 @@ public class yoga_select_pose extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yoga_select_pose);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         newArray=new int[]{
                 R.id.boat_pose, R.id.bow_pose, R.id.cobra_pose, R.id.crescent_lunge, R.id.downward_facing_dog, R.id.easy_pose,
                 R.id.half_pegion_pose, R.id.low_lunge, R.id.upward_bow, R.id.warrior_pose, R.id.warrior_pose2
@@ -23,7 +27,7 @@ public class yoga_select_pose extends AppCompatActivity
 
     public void ImageButtonClicked(View view)
     {
-        for(int i=0;i<=newArray.length;i++)
+        for(int i=0;i<newArray.length;i++)
         {
             if(view.getId()==newArray[i]) {
                 int value = i + 1;

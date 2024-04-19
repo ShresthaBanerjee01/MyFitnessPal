@@ -25,7 +25,11 @@ public class Safaris extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_safaris);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Ranthambore National Park, Rajasthan",R.drawable.hillstation_tp,"Known for its thriving population of Bengal tigers, Ranthambore offers exhilarating safaris amidst ancient ruins and diverse wildlife. Best visited from October to March.\n" +
                 "Tourist spots: Ranthambore Fort, Padam Talao, Trinetra Ganesh Temple.","November"));

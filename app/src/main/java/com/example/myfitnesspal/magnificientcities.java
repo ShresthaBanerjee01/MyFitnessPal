@@ -25,7 +25,11 @@ public class magnificientcities extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_magnificientcities);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Jaipur, Rajasthan",R.drawable.hillstation_tp,"Known as the Pink City, Jaipur is famous for its majestic forts, vibrant bazaars, and rich cultural heritage, offering a glimpse into Rajasthan's royal past. Best visited from October to March.\n" +
                 "Tourist spots: Amber Fort, City Palace, Hawa Mahal, Jantar Mantar, Nahargarh Fort.\n","November"));

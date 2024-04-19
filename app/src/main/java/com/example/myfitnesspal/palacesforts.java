@@ -25,7 +25,11 @@ public class palacesforts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palacesforts);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Red Fort, Delhi",R.drawable.hillstation_tp,"Red Fort is an iconic UNESCO World Heritage Site, showcasing Mughal architecture with red sandstone walls, marble palaces, and intricate ornamentation, serving as the backdrop for India's Independence Day celebrations, offering a glimpse into Delhi's rich history. Best visited from October to March.\n" +
                 "Tourist spots: Jama Masjid, Chandni Chowk, Raj Ghat, Qutub Minar.","November"));

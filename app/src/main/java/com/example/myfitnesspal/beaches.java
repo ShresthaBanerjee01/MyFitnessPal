@@ -25,7 +25,11 @@ public class beaches extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beaches);
-        getSupportActionBar().hide();
+      //  getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         List<TopsubPlacesData> topsubPlacesDataList = new ArrayList<>();
         topsubPlacesDataList.add(new TopsubPlacesData("Radhanagar Beach, Andaman and Nicobar Islands",R.drawable.hillstation_tp,"Radhanagar Beach is known for its powdery white sand, crystal-clear waters, and stunning sunset views, offering a serene escape amidst nature's splendor. Best visited from November to April.\n" +
                 "Tourist spots: Elephant Beach, Cellular Jail, Ross Island, Neil Island, Mahatma Gandhi Marine National Park.","November"));

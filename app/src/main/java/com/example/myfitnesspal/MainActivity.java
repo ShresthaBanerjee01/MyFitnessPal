@@ -1,8 +1,8 @@
 package com.example.myfitnesspal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     VideoView vv;
@@ -47,9 +49,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // do something
-                Intent intent = new Intent(MainActivity.this, aftersplash.class);
-                // If you just use this that is not a valid context. Use ActivityName.this
+                SharedPreferences sharedPreferences = getSharedPreferences("StepPrefs", Context.MODE_PRIVATE);
+                boolean isRegistered = sharedPreferences.getBoolean("isRegistered", false);
+
+                Intent intent;
+                if (isRegistered) {
+                    // User has already registered, direct to login page
+                    intent = new Intent(MainActivity.this, LoginActivity.class);
+                } else {
+                    // User has not registered yet, direct to registration page
+                    intent = new Intent(MainActivity.this, RegistrationActivity.class);
+                }
+
                 startActivity(intent);
+                finish();
             }
         }, 2000);
     }

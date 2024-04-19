@@ -17,7 +17,9 @@ public class aftersplash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_splash);
-        getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         bmi=(ImageButton) findViewById(R.id.Button1);
         bmi.setOnClickListener(new View.OnClickListener() {
             @Override

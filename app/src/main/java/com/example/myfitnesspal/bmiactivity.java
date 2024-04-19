@@ -3,9 +3,7 @@ package com.example.myfitnesspal;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -43,7 +41,7 @@ yoga_select_pose b = new yoga_select_pose();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmiactivity);
-        getSupportActionBar().setElevation(0);
+        /*getSupportActionBar().setElevation(0);
         ColorDrawable colorDrawable=new ColorDrawable(Color.parseColor("#1E1D1D"));
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
@@ -52,8 +50,10 @@ yoga_select_pose b = new yoga_select_pose();
 
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
-        getSupportActionBar().setTitle("Result");
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Result");*/
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
 
         intent=getIntent();
         mbmidisplay=findViewById(R.id.bmidisplay);

@@ -1,5 +1,6 @@
 package com.example.myfitnesspal;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class doctors extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         ImageView nutritionistText = findViewById(R.id.nutritionistImage);
         ImageView psychiatristText = findViewById(R.id.psychiatristImage);
         ImageView physiotherapistText = findViewById(R.id.physiotherapistImage);
+
 
         nutritionistText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,5 +45,6 @@ public class doctors extends AppCompatActivity {
                 startActivity(new Intent(doctors.this, physiotherapist.class));
             }
         });
+
     }
 }

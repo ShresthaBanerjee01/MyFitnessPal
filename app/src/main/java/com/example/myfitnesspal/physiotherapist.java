@@ -34,7 +34,11 @@ public class physiotherapist extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physiotherapist);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         readExcelFileFromAssets();
         placeEditText = findViewById(R.id.placeEditText);
         searchButton = findViewById(R.id.searchButton);

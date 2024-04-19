@@ -25,8 +25,12 @@ ImageView hotels;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
-        getSupportActionBar().hide();
-hotels = findViewById(R.id.hotels);
+        //getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
+        hotels = findViewById(R.id.hotels);
 hotels.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
