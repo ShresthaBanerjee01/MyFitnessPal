@@ -244,11 +244,12 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
             String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(calendar.getTime());
             StepsDailyDataSource stepsDailyDataSource = new StepsDailyDataSource(this);
             stepsDailyDataSource.open();
-            int existingStepsCount = stepsDailyDataSource.getStepsCountForDate(userId, currentDate);
-            if (existingStepsCount == 0) {
-                stepsDailyDataSource.open();
-                stepsDailyDataSource.insertStepsDaily(userId, currentDate, stepsdaily);
-                stepsDailyDataSource.close();
+
+            boolean recordExists = stepsDailyDataSource.doesRecordExistForDate(userId, currentDate);
+            if (!recordExists) {
+
+                stepsDailyDataSource.insertStepsDaily(userId, currentDate, stepsdaily);//last changes
+
             }
             stepsDailyDataSource.close();
             stepsdaily = 0;
@@ -259,6 +260,9 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
             updateStepstogoText();
             updateDistanceText();
             updateDistancetogoText();
+            SharedPreferences.Editor editor = sharedPreferences.edit();//last changes
+            editor.putInt(STEP_COUNT_KEY, stepsdaily);
+            editor.apply();
         }
 
     }

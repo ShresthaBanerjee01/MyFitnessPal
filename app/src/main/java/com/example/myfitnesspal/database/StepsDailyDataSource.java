@@ -94,4 +94,25 @@ public class StepsDailyDataSource {
         }
         return size;
     }
+    public boolean doesRecordExistForDate(int userId, String date) {
+        boolean recordExists = false;
+        Cursor cursor = null;
+        try {
+            cursor = database.query("steps_daily",
+                    new String[]{"stepsdaily"},
+                    "userId = ? AND date = ?",
+                    new String[]{String.valueOf(userId), date},
+                    null, null, null);
+
+            if (cursor != null && cursor.moveToFirst()) {
+                recordExists = true;
+            }
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return recordExists;
+    }
+
 }
