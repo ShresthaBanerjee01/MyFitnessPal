@@ -204,6 +204,9 @@ public class pedometer extends AppCompatActivity implements SensorEventListener{
             stepDetect = (int) (stepDetect+event.values[0]);
             stepsdaily++;
             stepstogo=inttarget-stepsdaily ;
+            if (stepstogo < 0) {
+                stepstogo = 0; // Reset stepstogo to zero if it's negative //changes
+            }
         intdistance=d*stepsdaily;
             intdistancetogo=stepstogo*d;
             distance=String.format("%.2f", intdistance);
